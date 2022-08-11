@@ -14,7 +14,7 @@ The sensor has specific timing requirements to drive its LED and to sample outpu
 - MPLAB® X IDE [6.00 or newer](https://www.microchip.com/mplab/mplab-x-ide)
 - Microchip XC8 Compiler [2.35 or newer](https://www.microchip.com/mplab/compilers)
 - MPLAB® Code Configurator (MCC) [5.1.2 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
-- Microchip PIC16F1xxxx Series Device Support (DFP) [1.13.178 or newer](https://packs.download.microchip.com/)
+- Microchip PIC16F1xxxx Series Device Support (DFP) [1.14.187 or newer](https://packs.download.microchip.com/)
 
 ## Hardware Used
 - [PIC16F18146 DIP IC](https://www.microchip.com/product/PIC16F18146)
@@ -102,11 +102,13 @@ The below block diagram shows the peripherals used and their interconnections as
 ![block-diagram](images/block-diagram.png)
 
 ## Hardware Setup
-![hardware-setup](images/hardware-setup.png)
+![hardware-setup](images/hardware-setup.jpg)
 
-*Proto click which acts as general purpose PCB is used to connect the discrete components to MCU through the microBUS header.*
+In this example, Curiosity LPC board is used as development platform. Proto click which acts as general purpose PCB is used to connect the discrete components to MCU through the microBUS header.
 
 **Important: GP2Y1014AU0F sensor requires 5V to operate. Make sure the J12 jumper on the curiosity board is placed to set 5V.**
+
+*Note: Curiosity LPC board has a LED (D7) connected to the pin RC5 which is output of PWM in this example. Thus, LED D7 will be always turned on.*
 
 ## Hardware Connection
 A Resister of 150Ω and capacitor of 220uF are required to pulse drive the LED of GP2Y1014AU0F. Refer to the schematic diagram for connection details.

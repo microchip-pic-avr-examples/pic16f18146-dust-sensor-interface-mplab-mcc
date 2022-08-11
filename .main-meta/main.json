@@ -20,7 +20,7 @@
         ],
         "dfp": {
             "name": "PIC16F1xxxx_DFP",
-            "semverRange": "^1.13.178"
+            "semverRange": "^1.14.187"
         },
         "configurator": {
             "name": "MCC",
