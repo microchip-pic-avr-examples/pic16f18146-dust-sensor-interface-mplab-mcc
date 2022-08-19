@@ -40,7 +40,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include <stdio.h>
+#include <conio.h>
 #include "config_bits.h"
 #include "../system/clock.h"
 #include "../system/pins.h"

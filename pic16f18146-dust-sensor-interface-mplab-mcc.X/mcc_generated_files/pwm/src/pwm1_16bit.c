@@ -7,7 +7,7 @@
   *
   * @brief This file contains the driver code for PWM1_16BIT module.
   *
-  * version PWM1_16BIT Driver Version <!--Use existing driver version-->
+  * version PWM1_16BIT Driver Version 1.0.1
 */
 
 /*

@@ -1,5 +1,5 @@
 /** 
- * TMR2 Generated Driver API Header File
+ * TMR Generated Driver API Header File
  *
  * @file timer_interface.h
  *  
@@ -38,8 +38,8 @@
  * @brief This file contains API prototypes and other data types for Timer interface.
  * @{
  */
-
-#include<stddef.h>
+ 
+ #include<stddef.h>
         
 /**
  @ingroup timer_interface

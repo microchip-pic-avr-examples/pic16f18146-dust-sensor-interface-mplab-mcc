@@ -7,7 +7,7 @@
  *
  * @brief This header file provides APIs for the PWM1_16BIT driver.
  *
- * @version PWM1_16BIT Driver Version <!--Use existing driver version-->
+ * @version PWM1_16BIT Driver Version 1.0.1
 */
 
 /*

@@ -33,7 +33,7 @@
 #include "mcc_generated_files/system/system.h"
 
 /***********************************
- Analog channel: RC2
+ Analog (Dust sensor output) channel: RC2
  CLC3 o/p (TMR2 output): RC6  -- for testing purpose
  PWM1 o/p : RC5
  
@@ -52,10 +52,10 @@
 float ConvertAdcCountToVoltage(uint16_t adcResult);
 float CalculateDustDensity(float voltage); 
 
-static float voltageNoDust = 0.6F; // Typical output voltage at no dust in volt. 
+static float voltageNoDust = 0.6F; //typical output voltage at no dust in volt. 
 
 //sensitivity needs to be adjusted as per calibration for accurate result
-static const float sensitivity = 0.5F; // Typical sensitivity of dust sensor in volt per 100ug/m3
+static const float sensitivity = 0.5F; //typical sensitivity of dust sensor in volt per 100ug/m3
 
 int main(void)
 {
@@ -81,7 +81,7 @@ int main(void)
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
     
-    printf("\n\t\t**** Dust (PM) Sensor Interface using PIC16F17146 ****\n\n\r");
+    printf("\n\t\t**** Dust (PM) Sensor Interface using PIC16F18146 ****\n\n\r");
     
     //select Dust Sensor as ADC channel
     ADPCH = DustSensor_Vo; 
@@ -111,7 +111,7 @@ float ConvertAdcCountToVoltage(uint16_t adcResult)
 {
     float voltage = 0;
     
-    // Compute the output voltage in Volts.
+    //compute the output voltage in Volts.
     voltage = (float)(adcResult * ADC_REFERENCE_VOLATGE);     
     voltage = voltage / ADC_HIGHEST_COUNT;
     

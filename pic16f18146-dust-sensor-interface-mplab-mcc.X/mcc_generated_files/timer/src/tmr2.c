@@ -5,7 +5,7 @@
  * 
  * @ingroup  tmr2
  * 
- * @brief This is the generated driver implementation file for the TMR2 module.
+ * @brief API implementations for the TMR2 module.
  *
  * @version TMR2 Driver Version 3.0.1
  */

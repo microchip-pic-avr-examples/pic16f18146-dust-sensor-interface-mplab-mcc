@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f18146-dust-sensor-interface-mplab-mcc",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "displayName": "Dust Sensor Interface using PIC16F18146 Microcontroller",
         "projectName": "pic16f18146-dust-sensor-interface-mplab-mcc",
         "shortDescription": "This code example demonstrates how to interface a dust sensor using ADCC, PWM and Timer of the PIC microcontroller. Some compatible PIC16F17146 and PIC16F18146 family of MCUs are: PIC16F17146, PIC16F17125, PIC16F18146, PIC16F18125",

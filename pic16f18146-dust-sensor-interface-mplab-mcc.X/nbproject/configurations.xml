@@ -96,13 +96,13 @@
         <targetDevice>PIC16F18146</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.36</languageToolchainVersion>
+        <languageToolchainVersion>2.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.13.178"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.14.187"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -239,11 +239,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.35</languageToolchainVersion>
+        <languageToolchainVersion>2.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.13.178"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.14.187"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
