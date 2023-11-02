@@ -1,16 +1,16 @@
 /**
- * CLC3 Generated Driver File
+ * CLC3 Generated Driver File.
  * 
  * @file clc3.c
  * 
  * @ingroup  clc3
  * 
- * @brief This is the generated driver implementation file for the CLC3 driver.
+ * @brief This file contains the API implementations for the CLC3 driver.
  *
- * @version CLC3 Driver Version 1.0.1
+ * @version CLC3 Driver Version 1.1.0
 */
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -35,7 +35,7 @@
 #include "../clc3.h"
 
 
-void CLC3_Initialize(void)
+void CLC3_Initialize(void) 
 {
     
     // SLCT 0x2; 
@@ -65,8 +65,18 @@ void CLC3_Initialize(void)
 
 }
 
+void CLC3_Enable(void) 
+{
+    CLCnCONbits.EN = 1;
+}
 
-bool CLC3_OutputStatusGet(void)
+void CLC3_Disable(void) 
+{
+    CLCnCONbits.EN = 0;
+}
+
+
+bool CLC3_OutputStatusGet(void) 
 {
     return(CLCDATAbits.CLC3OUT);
 }

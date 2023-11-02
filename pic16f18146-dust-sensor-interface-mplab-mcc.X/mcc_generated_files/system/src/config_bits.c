@@ -1,17 +1,17 @@
 /**
- * CONFIGURATION BITS Generated Driver Source File
+ * Configuration Bits Generated Driver Source File
  * 
  * @file config_bits.c
  * 
  * @ingroup config_bitsdriver
  * 
- * @brief This is the generated Device Configuration Bits file.
+ * @brief This file contains the API Implementation for the Device Configuration Bits driver.
  *
  * @version Driver Version 2.0.1
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -32,6 +32,7 @@
 */
 
 // Configuration bits: selected in the GUI
+
 //CONFIG1
 #pragma config FEXTOSC = OFF    // External Oscillator Selection bits->Oscillator not enabled
 #pragma config RSTOSC = HFINTOSC_1MHz    // Reset Oscillator Selection bits->HFINTOSC (1MHz)
@@ -50,6 +51,7 @@
 #pragma config ZCD = OFF    // ZCD Disable bit->ZCD module is disabled; ZCD can be enabled by setting the ZCDSEN bit of ZCDCON
 #pragma config PPS1WAY = ON    // PPSLOCKED One-Way Set Enable bit->The PPSLOCKED bit can be cleared and set only once after an unlocking sequence is executed; once PPSLOCKED is set, all future changes to PPS registers are prevented
 #pragma config STVREN = ON    // Stack Overflow/Underflow Reset Enable bit->Stack Overflow or Underflow will cause a reset
+#pragma config DEBUG = OFF    // Background Debugger->Background Debugger disabled
 
 //CONFIG3
 #pragma config WDTCPS = WDTCPS_31    // WDT Period Select bits->Divider ratio 1:65536; software control of WDTPS

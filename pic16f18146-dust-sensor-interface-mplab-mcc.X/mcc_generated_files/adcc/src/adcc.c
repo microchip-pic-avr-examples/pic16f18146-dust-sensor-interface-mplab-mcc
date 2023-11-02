@@ -10,7 +10,7 @@
  * @version ADCC Driver Version 1.0.1
 */
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -110,16 +110,16 @@ void ADCC_StartConversion(adcc_channel_t channel)
     ADPCH = channel;
   
     // Turn on the ADC module
-    ADCON0bits.ADON = 1;
+    ADCON0bits.ON = 1;
 
     // Start the conversion
-    ADCON0bits.ADGO = 1;
+    ADCON0bits.GO = 1;
 }
 
 bool ADCC_IsConversionDone(void)
 {
     // Start the conversion
-    return ((unsigned char)(!ADCON0bits.ADGO));
+    return ((unsigned char)(!ADCON0bits.GO));
 }
 
 adc_result_t ADCC_GetConversionResult(void)
@@ -134,17 +134,17 @@ adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
     ADPCH = channel;  
 
     // Turn on the ADC module
-    ADCON0bits.ADON = 1;
+    ADCON0bits.ON = 1;
     
     //Disable the continuous mode.
-    ADCON0bits.ADCONT = 0;
+    ADCON0bits.CONT = 0;
 
     // Start the conversion
-    ADCON0bits.ADGO = 1;
+    ADCON0bits.GO = 1;
 
 
     // Wait for the conversion to finish
-    while (ADCON0bits.ADGO)
+    while (ADCON0bits.GO)
     {
     }
     
@@ -155,7 +155,7 @@ adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
 inline void ADCC_StopConversion(void)
 {
     //Reset the ADGO bit.
-    ADCON0bits.ADGO = 0;
+    ADCON0bits.GO = 0;
 }
 
 inline void ADCC_SetStopOnInterrupt(void)
@@ -261,14 +261,14 @@ inline void ADCC_EnableDoubleSampling(void)
 
 inline void ADCC_EnableContinuousConversion(void)
 {
-    //Sets the ADCON0bits.ADCONT
-    ADCON0bits.ADCONT = 1;
+    //Sets the ADCON0bits.CONT
+    ADCON0bits.CONT = 1;
 }
 
 inline void ADCC_DisableContinuousConversion(void)
 {
-    //Resets the ADCON0bits.ADCONT
-    ADCON0bits.ADCONT = 0;
+    //Resets the ADCON0bits.CONT
+    ADCON0bits.CONT = 0;
 }
 
 bool ADCC_HasErrorCrossedUpperThreshold(void)

@@ -12,7 +12,7 @@
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -65,11 +65,6 @@ void PIN_MANAGER_Initialize(void)
     WPUB = 0x0;
     WPUC = 0x0;
   
-
-    /**
-    APFCONx registers
-    */
-
     /**
     ODx registers
     */
@@ -97,6 +92,10 @@ void PIN_MANAGER_Initialize(void)
     RC6PPS = 0x03;  //RC6->CLC3:CLC3OUT;
     RC5PPS = 0x0B;  //RC5->PWM1_16BIT:PWM11;
     RB7PPS = 0x13;  //RB7->EUSART1:TX1;
+
+    /**
+    APFCON registers
+    */
 
    /**
     IOCx registers 

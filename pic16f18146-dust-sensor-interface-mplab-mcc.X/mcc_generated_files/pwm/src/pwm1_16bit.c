@@ -1,17 +1,17 @@
 /**
-  * PWM1_16BIT Generated Driver File
+  * PWM1_16BIT Generated Driver File.
   *
   * @file pwm1_16bit.c
   *
   * @ingroup pwm1_16bit
   *
-  * @brief This file contains the driver code for PWM1_16BIT module.
+  * @brief This file contains the API implementation for the PWM1_16BIT module.
   *
   * version PWM1_16BIT Driver Version 1.0.1
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 

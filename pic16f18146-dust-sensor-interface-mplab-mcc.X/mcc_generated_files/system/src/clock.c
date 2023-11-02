@@ -5,13 +5,13 @@
  * 
  * @ingroup clockdriver 
  * 
- * @brief This is the generated driver implementation file for the CLOCK.
+ * @brief This file contains the API prototypes for the Clock driver.
  *
- * @version Driver Version 2.0.2
+ * @version Driver Version 2.0.3
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -37,18 +37,19 @@
 void CLOCK_Initialize(void)
 {
     // Set the CLOCK CONTROL module to the options selected in the user interface.
-    // NDIV 1; NOSC HFINTOSC; 
+    //NDIV 1; NOSC HFINTOSC; 
     OSCCON1 = 0x60;
-    // SOSCPWR High power; CSWHOLD may proceed; 
+    //SOSCPWR High power; CSWHOLD may proceed; 
     OSCCON3 = 0x40;
-    // EXTOEN disabled; HFOEN disabled; MFOEN disabled; LFOEN disabled; SOSCEN disabled; ADOEN disabled; 
+    //EXTOEN disabled; HFOEN disabled; MFOEN disabled; LFOEN disabled; SOSCEN disabled; ADOEN disabled; PLLEN disabled; 
     OSCEN = 0x0;
-    // HFFRQ 4_MHz; 
+    //HFFRQ 4_MHz; 
     OSCFRQ = 0x2;
-    // TUN undefined; 
+    //TUN undefined; 
     OSCTUNE = 0x0;
-    // ACTEN disabled; ACTUD enabled; ACTLOCK Not locked; ACTORS In range; 
+    //ACTEN disabled; ACTUD enabled; 
     ACTCON = 0x0;
+
 }
 /**
  End of File

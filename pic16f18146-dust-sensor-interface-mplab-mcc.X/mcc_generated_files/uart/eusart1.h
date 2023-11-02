@@ -10,7 +10,7 @@
  * @version EUSART1 Driver Version 3.0.0
 */
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -63,12 +63,13 @@
 
 #define UART1_TransmitEnable       EUSART1_TransmitEnable
 #define UART1_TransmitDisable      EUSART1_TransmitDisable
-#define UART1_AutoBaudSet          (NULL)
-#define UART1_AutoBaudQuery        (NULL)
-#define UART1_BRGSet               (NULL)
-#define UART1_BRGGet               (NULL)
-#define UART1_BaudSet              (NULL)
-#define UART1_BaudGet              (NULL)
+#define UART1_AutoBaudSet          EUSART1_AutoBaudSet
+#define UART1_AutoBaudQuery        EUSART1_AutoBaudQuery
+#define UART1_BRGCountSet                (NULL)
+#define UART1_BRGCountGet                (NULL)
+#define UART1_BaudRateSet                (NULL)
+#define UART1_BaudRateGet                (NULL)
+#define UART1__AutoBaudEventEnableGet    (NULL)
 #define UART1_ErrorGet             EUSART1_ErrorGet
 
 #define UART1_TxCompleteCallbackRegister     (NULL)
@@ -193,6 +194,38 @@ inline void EUSART1_SendBreakControlEnable(void);
  * @return None.
  */
 inline void EUSART1_SendBreakControlDisable(void);
+
+/**
+ * @ingroup eusart1
+ * @brief This API enables the EUSART1 AutoBaud Detection.
+ * @param bool enable.
+ * @return None.
+ */
+inline void EUSART1_AutoBaudSet(bool enable);
+
+/**
+ * @ingroup eusart1
+ * @brief This API reads the EUSART1 AutoBaud Detection Complete bit.
+ * @param None.
+ * @return bool.
+ */
+inline bool EUSART1_AutoBaudQuery(void);
+
+/**
+ * @ingroup eusart1
+ * @brief This API reads the EUSART1 AutoBaud Detection overflow bit.
+ * @param None.
+ * @return None.
+ */
+inline bool EUSART1_IsAutoBaudDetectOverflow(void);
+
+/**
+ * @ingroup eusart1
+ * @brief This API Reset the EUSART1 AutoBaud Detection Overflow bit.
+ * @param None.
+ * @return None.
+ */
+inline void EUSART1_AutoBaudDetectOverflowReset(void);
 
 /**
  * @ingroup eusart1
